@@ -1,4 +1,4 @@
-# 🔗 Quick Wa Link
+I'm# 🔗 Quick Wa Link
 
 Quick Wa Link is a beginner-friendly web tool that helps users generate WhatsApp links with pre-filled messages.
 
@@ -19,7 +19,6 @@ This is perfect for affiliate marketers, students, online vendors, or anyone who
 
 ## 💻 Live Demo
 
-👉 [Add your GitHub Pages link here after hosting]
 
 ---
 
@@ -42,9 +41,6 @@ As a beginner in tech and coding, this project taught me:
 
 ---
 
-## 📸 Screenshot
-
-_(Optional: add a screenshot image of the app interface here)_
 
 ---
 
