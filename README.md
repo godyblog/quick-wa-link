@@ -1,4 +1,4 @@
-I'm# 🔗 Quick Wa Link
+## 🔗 Quick Wa Link
 
 Quick Wa Link is a beginner-friendly web tool that helps users generate WhatsApp links with pre-filled messages.
 
