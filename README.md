@@ -19,7 +19,8 @@ This is perfect for affiliate marketers, students, online vendors, or anyone who
 
 ## 💻 Live Demo
 
-
+check out the live version here
+🖇️ https://godywa.netlify.app
 ---
 
 ## 🛠️ Built With
