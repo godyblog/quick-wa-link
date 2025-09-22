@@ -80,15 +80,14 @@ If you want to run the project on your local machine:
 
 I built this as part of my **web development learning journey**.
 If you test it, kindly share your honest feedback so I can improve it
-further. 🙏
+further. 🙏 Please use the contact form in the app(at the bottom of the page) to send me feedback. Thanks 
 
 ------------------------------------------------------------------------
 
 ## 👤 Author
 
-**Gody Blogs ✍️**\
-Writer \| Affiliate Coach \| Web Dev Enthusiast
-
+**Gody Blogs ✍️**
+Digital Marketer and web developer from Cameroon 🇨🇲 
 ---
 
 ## 🤝 Contributing
