@@ -1,177 +1,238 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
-    <title>Quick Wa.link</title>
-    <style>
-        body {
-            background-color: darkcyan;
-            width: 100%;
-            max-width: 1000;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            justify-content: space-between;
-        }
-        header {
-            width: 100%;
-            text-align: center;
-            font-size: 40px;
-            background-color: darkslategray;
-            color: white;
-            top: 0;
-            font-weight: bold;
-            padding: 5px;
-            border-bottom: 5px solid gray;
-        }
-        .footer {
-            background-color: gray;
-            text-align: center;
-            width: auto;
-            padding: 5px;
-        }
-        textarea {
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 16px;
-            width: 70%;
-            height: 100px;
-            border: 5px solid gray;
-            background-color:  rgba(243, 253, 253, 0.836);
-        }
-        .form {
-            background-color: rgba(3, 87, 87, 0.836);
-            width: 80%;
-            margin: auto;
-            border-radius: 10px;
-        }
-        .form h2 {
-            color: greenyellow;
-        }
-        #number {
-            width: 225px;
-            border-radius: 8px;
-            padding: 10px;
-            font-size: 14px;
-        }
-        select {
-            padding: 10px;
-            width: 250px;
-            border-radius: 5px;
-        }
-        #gen-btn {
-            width: 80%;
-            padding: 10px;
-            font-size: 25px;
-            color: black;
-            border-radius: 10px;
-            background-color: yellowgreen;
-            font-weight: bold;
-        }
-        #gen-btn:hover {
-            transform: scale(1.05);
-            background-color: tan;
-        }
-        #output {
-            background-color: darkgreen;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 20px;
-            color: green;
-            display: none;
-        }
-        .intro {
-             font-size: 30px; 
-             width: 60%; 
-             margin: auto;
-        }
-        #copy-btn {
-            display: none;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        #start {
-            font-size: 40px;
-            font-weight: bold;
-            background-color: yellowgreen;
-            padding: 10px;
-            border: 5px solid white;
-            width: 50%;
-            border-radius: 20px;
-        }
-        #start:hover {
-            background-color: cadetblue;
-            transform: scale(1.05);
-        }
-        img {
-            width: 20%;
-        }
-        main {
-            text-align: center; 
-            background-color: darkcyan;
-            margin: auto;
-        }
-        .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-        width: 40px;
-        height: 40px;
-        background-color: #25d366;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        transition: transform 0.3s ease;
-        }
-        .whatsapp-float img {
-        width: 100%;
-        height: auto;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quick Wa Link</title>
+  <meta name="description" content="Quick Wa Link lets you generate free WhatsApp links with pre-filled messages for marketing, sales, and customer service.">
+  <link rel="icon" href="images/quick-wa-link-logo.png" type="image/png">
+  <link rel="stylesheet" href="index-style.css" />
 </head>
 <body>
-    <header>GB-Tech.com</header>
-    <br>
-    <br>
-    <main>
-        <h1 style="color: greenyellow; font-size: 80px;">Quick Wa Link</h1>
-        <p class="intro">~ Generate Whatsapp links with customised messages in one click of a Button!</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa logo">
-        <br>
-        <br>
-        <button id="start" onclick="getStarted()">Get Started!</button>
-        <div class="form" id="form">
-            <h2><b>Start By</b></h2>
-            <select id="code">
-                <option value="0">Choose country code</option>
+
+  <!-- Header -->
+  <header class="site-header">
+    <img src="images/quick-wa-link-logo.png" class="site-logo" alt="Quick Wa Link logo">
+    
+    <div class="brand">
+      <h1 class="site-title">Quick Wa Link</h1>
+      <h2 class="tagline">Generate WhatsApp links fast, share anywhere</h2>
+    </div>
+    
+    <button id="menuBtn" class="menu-btn" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+  
+  <!-- Navigation -->
+  <nav id="navMenu" aria-hidden="true">
+    <ul class="nav-list">
+      <li><a class="navLinks" href="#intro">Home</a></li>
+      <li><a class="navLinks" href="#createLink">Create Link</a></li>
+      <li><a class="navLinks" href="#blog">Blog - What's New?</a></li>
+      <li><a class="navLinks" href="#help">Help Center</a></li>
+      <li><a class="navLinks" href="#developer">The Developer</a></li>
+      <li><a class="navLinks" href="#contactSection">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Intro / Hero -->
+    <section id="intro" class="intro-section">
+      <div class="wrap">
+        <h2>Create WhatsApp Links in Seconds <br><i>🚀</i></h2>
+        <p class="highlight">Quick Wa Link turns a phone number and a short message into a clickable WhatsApp URL you can drop into posts, profiles, ads, or bios, so people message you without saving your number first.</p>
+      </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="why" class="why-section">
+      <div class="wrap">
+        <h2>Why Quick Wa Link matters for marketers</h2>
+        <p class="highlight">Turn a phone number and a short message into a clickable WhatsApp URL. With a single link you can:</p>
+        <ul class="benefits-list">
+          <li>Share a ready-to-chat link on Facebook, Instagram, TikTok, and Twitter</li>
+          <li>Use a default message to qualify leads instantly</li>
+          <li>Save time, look professional, and close conversations faster</li>
+        </ul>
+        <h3>What are you waiting for?</h3>
+      </div>
+    </section>
+
+    <!-- Create / Form Section -->
+    <section id="createLink" class="form-section">
+      <div class="wrap">
+        <h2>Create your WhatsApp link</h2>
+        
+        <form id="waForm">
+          <div class="input-group">
+            <label for="countryCode">Country Code:</label>
+            <select id="countryCode" name="countryCode" required>
+              <option value="">Select country code</option>
             </select>
-            <input type="tel" id="number" pattern="[0-9]{9,15}" maxlength="15" placeholder="Enter phone number.g 654841420" required>
-            <p style="font-size: 20px; color: greenyellow;">Enter  custom message.</p>
-            <textarea type="text" id="message" name="message" placeholder='E.g "Hello sir, I am interested in your product' required></textarea>
-            <br>
-            <br>
-            <button id="gen-btn" onclick="generateLink()">Generate WhatsApp Link</button>
-            <br>
-            <p id="output"></p><button id="copy-btn" onclick="copyLink()">Copy Link</button>
-            <br>
+          </div>
+          
+          <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="\d{6,15}" maxlength="15" placeholder="Example: 650123456" required />
+          </div>
+          
+          <div class="input-group">
+            <label for="message">Optional pre-filled message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hello, I saw your offer and I'm interested..."></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" id="generateBtn">Generate Link</button>
+            <button type="button" id="previewBtn">Preview</button>
+          </div>
+          <div id="notification" class="notification" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Output / Link Section -->
+    <section id="outputSection" class="output-section">
+      <div class="wrap">
+        <h2 class="output-title">Your Link is Ready 🎉</h2>
+        <p class="output-instruction">Copy and paste this where you want people to contact you.</p>
+        <div class="link-row">
+          <a id="waLink" href="#" target="_blank" rel="noopener noreferrer" class="wa-link">https://wa.me/</a>
+          <button id="copyBtn" class="copy-btn">Copy</button>
         </div>
-        <br>
-        <br>
-        <a href="https://wa.me/237683250533?text=Hello%20Gody%2C%20I%20have%20a%20question%20about%20your%20Wa.link%20tool" class="whatsapp-float" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
-        </a>
-    </main>
-    <p class="footer">@ GB-Tech 2025 All Rights Reserved.</p>
-    <script src="main.js"></script>
+        <p>You can also click the link to chat directly.</p>
+      </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section id="previewSection" class="preview-section">
+      <div class="wrap">
+        <h2>Preview (WhatsApp-style)</h2>
+        <p class="muted">This mock phone shows how the message will appear when a user clicks your link.</p>
+
+        <div class="phone-preview" role="region" aria-label="WhatsApp preview">
+          <div class="phone-top">
+            <p>👤</p>
+            <h3 id="preview-tel">+237683477634</h3>
+          </div>
+          <div class="phone-body">
+            <div class="chat sent">Hi there, is this still available?</div>
+            <div class="chat received">Hello! Thanks for reaching out.</div>
+            <div class="chat sent" id="previewMessage">Hi! I saw your offer and I'm interested.</div>
+          </div>
+          <div class="phone-bottom">
+            <p class="input">Type in message</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help / How to use -->
+    <section id="help" class="help-section">
+      <div class="wrap">
+        <h2>How to use Quick Wa Link</h2>
+        <ol>
+          <li>Choose your country from the list.</li>
+          <li>Enter the phone number without the leading zero or plus sign.</li>
+          <li>Write an optional default message to greet customers or qualify leads.</li>
+          <li>Click <strong>Generate Link</strong>, open the link to test, then copy to use in social posts.</li>
+          <li>Use <strong>Preview</strong> to check how the message looks on a phone mockup before you share.</li>
+          <li>You can also click on the link directly to chat on Whatsapp.</li>
+        </ol>
+        
+        <p class="note">Tip: Use short, friendly messages. Example: "Hi, I'm interested in your product, please send details."</p>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <div class="wrap">
+        <h2>What’s new in Quick Wa Link v2</h2>
+        <p>Our new version comes with important upgrades including:</p>
+        <ul>
+          <li>Built-in preview that mimics WhatsApp chat, so you can test messages quickly</li>
+          <li>Optional message field to pre-fill customer texts</li>
+          <li>Contact form so users can report issues or suggest features</li>
+          <li>Clear sections and navigation for easy use and sharing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About Developer -->
+    <section id="developer" class="developer-section">
+      <div class="wrap">
+        <h2>About the Developer</h2>
+        <div class="card">
+          <img src="images/dev-profile-picture.jpg" alt="profile picture" class="profile-picture">
+          <h3>Godlove AKA <strong>Gody Blogs</strong></h3>
+        </div>
+        
+        <div class="card">
+          <p>I am an affiliate coach and beginner web developer. I built Quick Wa Link to ease up the process of getting a WhatsApp link for your marketing.<br><br>Want to reach me directly? Click any button below:</p>
+          <nav class="socials">
+            <a id="devWaLink" class="dev-wa" href="https://wa.me/237654841420?text=*Coming%20from%20Quick%20Wa%20Link*%0A%0AHello%20Gody..." target="_blank" rel="noopener noreferrer" data-whatsapp="+237654841420">WhatsApp</a>
+            <a id="devFbLink" href="https://www.facebook.com/godlovetikum" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Feedback -->
+    <section id="contactSection" class="contact-section">
+      <div class="wrap">
+        <h2>Contact & Feedback</h2>
+        <p class="muted">Got a bug or a suggestion? Send a short message and I will respond.</p>
+
+        <form id="contactForm" action="https://formsubmit.co/godizmedia101@gmail.com" method="post">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://quickwalink.netlify.app/thanks">
+          
+          
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          
+          <div class="input-group">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" placeholder="Your Reason for messaging us" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <section class="close">
+      <h2>Enjoy our tool?</h2>
+      <p>Follow <strong>Gody Blogs</strong> on Facebook!<br> <a href="https://www.facebook.com/godlovetikum" rel="noopener noreferrer" target="_blank">@Gody-Blogs</a></p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <i>&COPY; <span id="year"></span> Quick Wa Link — Built by <a href="https://www.facebook.com/godlovetikum" rel="noopener noreferrer">Gody Blogs</a></i>
+      </div>
+    </footer>
+  </main>
+  
+  <script src="JavaScript.js"></script>
+  <script>
+    // Auto-update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

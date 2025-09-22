@@ -1,0 +1,532 @@
+ * {
+   box-sizing: border-box;
+   max-width: 100%;
+   z-index: 1;
+   opacity: 1;
+ }
+ 
+ body {
+   width: 100vw;
+   max-width: 1800px;
+   background: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #000;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+ }
+ 
+ footer {
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid #000;
+   padding: 2rem;
+   background: #346;
+   color: #fff;
+   z-index: 5;
+ }
+ 
+ footer a {
+   text-decoration: none;
+   color: #0cc;
+   white-space: nowrap;
+ }
+ 
+ main {
+   position: relative;
+   top: 70px;
+   min-height: 100vh;
+   margin-left: 255px;
+   flex: 1;
+ }
+ 
+ #navMenu {
+   width: 250px;
+   height: 110vh;
+   background: #efe;
+   box-shadow: 2px -5px 5px #777;
+   position: fixed;
+   z-index: 1;
+   top: 70px;
+   bottom: 0;
+   left: 0;
+   overflow-y: auto;
+   padding-top: 1.5rem;
+ }
+ 
+ #navMenu li {
+   padding: 5px;
+   width: 100%;
+ }
+ 
+ #navMenu a {
+   width: 100%;
+   padding: 2px;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1.4rem;
+ }
+ 
+ header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   padding: 0 2rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space;
+   gap: 50px;
+   align-items: center;
+   box-shadow: 0 2px 5px #000;
+   background: linear-gradient(135deg, #077, #366);
+   color: #eff;
+ }
+ 
+ header p {
+   margin-top: auto;
+   color: #fff;
+ }
+ 
+ header h1 {
+   font-size: 1.4rem;
+ }
+ 
+ header img {
+   width: 80px;
+   height: 80px;
+   font-size: 10px;
+   border-radius: 50%;
+   text-align: center;
+   color: #000;
+   background: #ccc;
+ }
+ 
+ #menuBtn {
+   height: 50px;
+   width: 40px;
+   border: none;
+   background: none;
+   padding: 12px 0;
+   flex-direction: column;
+   display: none;
+   justify-content: space-between;
+ }
+ 
+ #menuBtn .bar {
+   width: 100%;
+   height: 3px;
+   border-radius: 10px;
+   background: #fff;
+ }
+ 
+ 
+ section {
+   width: 100%;
+   padding: 1.5rem;
+   padding-top: 4rem;
+ }
+
+ section h2 {
+   width: 100%;
+   color: #356;
+   text-align: center;
+   font-size: 1.5rem;
+ }
+ 
+ #intro  {
+   width: 100%;
+   align-content: center;
+   text-align: center;
+   color: #344;
+   background: #3e3;
+   border-bottom-right-radius: 70% 30px;
+   border-bottom-left-radius: 70% 50px;
+}
+
+#intro i {
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 2px 3px 5px #000;
+}
+
+#intro p {
+  color: #345;
+}
+
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 0 5px #356;
+}
+
+.input-group {
+  width: 100%;
+  padding: 5px 0;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  resize: none;
+}
+
+form input[type="tel"],
+form input[type="email"] {
+  font-weight: bold;
+}
+
+
+form label {
+  font-weight: bold;
+}
+
+form button {
+  padding: 5px;
+  background: linear-gradient(to top, #367, #367,  #3d0);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#createLink button {
+  width: 49%;
+}
+
+.contact-section button {
+  width: 100%;
+}
+
+#createLink, .preview-section, #blog, .contact-section {
+  background: #efe;
+}
+
+
+
+.output-section {
+  padding: 1rem;
+  background: #f8f9fa;
+  padding-bottom: 60px;
+}
+
+.output-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.output-instruction {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8ffff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wa-link {
+  flex: 1;
+  white-space: nowrap;
+  overflow: scroll;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px;
+  border: 0.25px solid #366;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.wa-link:hover {
+  background: #ccc;
+}
+
+.copy-btn {
+  padding: 5px;
+  background: #3e3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #ccc;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+  background: #ccc;
+  color: #006;
+}
+
+
+#blog h2 {
+  color: #000;
+  white-space: nowrap;
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+
+.phone-preview {
+  background: #fff;
+  width: 80%;
+  max-width: 350pc;
+  margin: auto;
+  border: 5px solid #ccc;
+  box-shadow: 0 0 5px #356;
+  border-radius: 1rem;
+  padding: 10px 5px;
+}
+
+.phone-top {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 0 10px;
+  background: #777;
+  align-content: center;
+}
+
+.phone-top p {
+  background: #fff;
+  border-radius: 50%;
+  align-items: center;
+  padding: 5px;
+}
+
+  .phone-top h3 {
+  font-size: 1rem;
+  color: #007;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+.phone-bottom .input {
+  flex: 1;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 8px;
+}
+
+.phone-bottom {
+  padding: 0 5px;
+}
+
+.phone-body {
+  width: 100%;
+  padding: 10px 5px;
+  height: 250px;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.phone-body .chat {
+  max-width: 80%;
+  background: #efe;
+  padding: 5px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1px #356;
+}
+
+.phone-body .sent {
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+.phone-body .received {
+  margin-right: auto;
+  background: #fff;
+  border-top-left-radius: 0;
+}
+
+#developer {
+  background: #ffe;
+}
+
+#developer img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #345;
+}
+
+#developer .wrap {
+  max-width: 320px;
+  margin: auto;
+  font-size: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+#developer h2 {
+  width: 100%;
+}
+
+#developer .card h3 {
+  font-size: 0.5rem;
+}
+
+#developer .wrap .card {
+  width: 40%;
+}
+#developer .socials {
+  width: 100%;
+  display: flex;
+  justify-content: space;
+  gap: 1rem;
+}
+
+#developer .socials a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#developer #devWaLink {
+  background: #2ed633;
+}
+
+#developer #devFbLink {
+  background: #00f;
+}
+
+#developer strong {
+  color: #500;
+}
+
+.close {
+  text-align: center;
+}
+
+.close a {
+  text-decoration: none;
+  color: #009;
+  font-weight: 500;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  white-space: nowrap;
+  right: auto;
+  left: auto;
+  background: #fff;
+  color: red;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 100;
+}
+.notification.show {
+  display: block;
+  animation: fadeOut 2s forwards;
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; top: 25%; }
+  100% { opacity: 0; top: 0; display: none; }
+}
+
+ @media(max-width:780px) {
+   body {
+     display: block;
+     flex-direction: column;
+   }
+   
+   header {
+     flex-direction: row-reverse;
+     justify-content: space-between;
+     gap: 0;
+     padding: 0 0.75rem;
+   }
+   
+   header .tagline {
+     display: none;
+   }
+   
+   header img {
+     width: 40px;
+     height: 40px;
+   }
+   
+   #menuBtn {
+     display: flex;
+   }
+   
+   #navMenu {
+     width: 90%;
+     position: fixed;
+     top: 30px;
+     left: -90%;
+     z-index: 5;
+     transition: left 0.5s ease-in-out;
+   }
+   
+   #navMenu.open {
+     left: 0;
+     transition: left 1s ease;
+   }
+   
+   
+   main {
+     top: 30px;
+     margin-left: 0;
+   }
+   
+   .phone-body .chat {
+     font-size: 8px;
+   }
+   
+   #developer .card {
+     width: 100%;
+     margin: auto;
+   }
+ }
+ 
+ @media(max-width: 300px) {
+   body {
+     font-size: 1rem;
+   }
+   
+   p, li {
+     font-size: 0.5rem;
+   }
+   
+   h2, .phone-preview #tel {
+     font-size: 1rem;
+   }
+ }
