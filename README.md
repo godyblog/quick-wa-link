@@ -9,7 +9,7 @@ individuals who want faster communication on WhatsApp.
 
 ## 🌍 Live Demo
 
-🔗 [Quick Wa Link](https://quickwalink.netlify.app)
+🔗 [Quick Wa Link](https://quick-wa-link.netlify.app)
 
 ------------------------------------------------------------------------
 
@@ -28,25 +28,6 @@ individuals who want faster communication on WhatsApp.
 -   **CSS3** -- Styling and responsiveness.
 -   **JavaScript (Vanilla JS)** -- Core logic for generating links.
 
-------------------------------------------------------------------------
-
-## 📥 Installation (Run Locally)
-
-If you want to run the project on your local machine:
-
-1.  Clone this repository:
-
-    ``` bash
-    git clone https://github.com/godyblog/quick-link.git
-    ```
-
-2.  Navigate to the project folder:
-
-    ``` bash
-    cd quick-wa-link
-    ```
-
-3.  Open `index.html` in your browser. 🚀
 
 ------------------------------------------------------------------------
 
@@ -113,5 +94,5 @@ This project is licensed under the **MIT License** – you are free to use, modi
 
 ## 📬 Connect With Me
 
-- Facebook: [Gody Blogs](https://facebook.com/godlovetikum)  
-- Threads: [@godyblogs](https://www.threads.com/@godyblogs)
+- Facebook: [Gody Blogs](https://facebook.com/godyblogs)  
+- Threads: [@godyblogs](https://www.threads.com/@godlovetikum)
