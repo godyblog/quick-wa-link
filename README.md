@@ -10,7 +10,7 @@ It’s a practical solution that anyone—business owner, freelancer, or individ
 
 ## 🌍 Live Demo
 
-🔗 [Try Quick Wa Link](https://quick-wa-link.netlify.app)
+🔗 [Try Quick Wa Link](https://quickwalink.netlify.app)
 
 ---
 
